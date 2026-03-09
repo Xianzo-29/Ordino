@@ -12,16 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Ordino
+namespace Ordino.View
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for MainLogin.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class MainLogin : Window
     {
-        public Login()
+        public MainLogin()
         {
             InitializeComponent();
+            this.DataContext = new ViewModel.LoginViewModel();
         }
+
+       
     }
 }

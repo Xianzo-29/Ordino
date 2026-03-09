@@ -19,9 +19,9 @@ namespace Ordino.View
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.LoginViewModel;
+            this.DataContext = new ViewModel.LoginViewModel();
         }
 
-      
+       
     }
 }

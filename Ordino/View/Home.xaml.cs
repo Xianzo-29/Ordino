@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Ordino.View
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class Home : Window
     {
-        public HomePage()
+        public Home()
         {
             InitializeComponent();
         }
-
-
     }
 }
