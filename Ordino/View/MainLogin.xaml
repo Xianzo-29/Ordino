@@ -67,22 +67,33 @@
                        HorizontalAlignment="Left"
                        Margin="20,80,0,-41"/>
             <TextBox x:Name="txtUsername" 
-                     Text="{Binding CurrentUser.UserName, UpdateSourceTrigger=PropertyChanged}"
-                     FontSize="20" 
+                     Text="{Binding CurrentUser.UserName, UpdateSourceTrigger=PropertyChanged}" 
+                     SelectionTextBrush="#674646"
+                     FontSize="15" 
+                     FontFamily="Arial"
                      Height="24" 
                      Width ="170" 
-                     Margin=" -20,-90,-100,0" />
+                     Margin=" -20,-90,-100,0"
+                    
+                     Background="Transparent" 
+                     BorderThickness="1" 
+                     BorderBrush="#674646"
+                     />
             <TextBlock Text="Password" 
                        FontSize="15" 
                        Foreground="Black" 
                        HorizontalAlignment="Left"
                        Margin="20,170,0,-125"/>
-            <TextBox FontSize="20" 
+            <TextBox FontSize="15" 
                      Height="24" 
                      Width ="170" 
                      Margin=" -20,80,-100,0"
                      x:Name="txtPassword" 
                        Text="{Binding CurrentUser.Password, UpdateSourceTrigger=PropertyChanged}"
+                     
+                     Background="Transparent" 
+                     BorderThickness="1" 
+                     BorderBrush="#674646"
                      />
             <Button Content="Login"
                     Background="#FFD8CAFA"
