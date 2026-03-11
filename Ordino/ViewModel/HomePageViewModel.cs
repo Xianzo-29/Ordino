@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Ordino.ViewModel
 {
@@ -18,7 +19,8 @@ namespace Ordino.ViewModel
 
             homePageTests = new ObservableCollection<HomePageTest> 
             {
-            new HomePageTest { Course = "Math", Title = "BS1001"}
+                new HomePageTest { Course = "Math", Title = "BS1001"},
+                new HomePageTest { Course = "El Filibusterismo", Title = "BS1002" }
 
             };
 
