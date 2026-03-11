@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Home" Height="450" Width="800">
     <Grid Background="White">
-        <TextBlock Text="Main Menu" 
+        <!--<TextBlock Text="Main Menu" 
             FontSize="30" 
             Foreground="Black" 
             FontWeight="Medium"
@@ -34,6 +34,16 @@
         HorizontalAlignment="Center"
         Height="30" 
         Width="80"
-        Margin="0,198,0,0"/>
+        Margin="0,198,0,0"/>-->
+
+        <TextBlock Text="{Binding CurrentUser.UserName, UpdateSourceTrigger=PropertyChanged,
+            StringFormat='Welcome or sumn, {0}'}"
+            HorizontalAlignment="Center" FontSize="10" Margin="10,0,0,350"
+                   Width="150" Foreground="Black"/>
+
+        <DataGrid ItemsSource="{Binding homePageTests}" AutoGenerateColumns="True"
+                  CanUserAddRows="True" 
+                  Margin="0,100,0,0"
+                  Grid.RowSpan="2"/>
     </Grid>
 </Window>

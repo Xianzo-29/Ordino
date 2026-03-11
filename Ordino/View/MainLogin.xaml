@@ -63,7 +63,7 @@
                        Margin="0,25,0,35"/>
             <TextBlock Text="Username" 
                        FontSize="15" 
-                       Foreground="Black" 
+                       Foreground="#674646" 
                        HorizontalAlignment="Left"
                        Margin="20,80,0,-41"/>
             <TextBox x:Name="txtUsername" 
@@ -81,7 +81,7 @@
                      />
             <TextBlock Text="Password" 
                        FontSize="15" 
-                       Foreground="Black" 
+                       Foreground="#674646" 
                        HorizontalAlignment="Left"
                        Margin="20,170,0,-125"/>
             <TextBox FontSize="15" 

@@ -27,7 +27,10 @@ namespace Ordino.ViewModel
         {
             if (CurrentUser.UserName.Trim() == "admin" && CurrentUser.Password.Trim() == "1234")
             {
+                var newViewModel = new HomePageViewModel(CurrentUser);
+
                 var loginWindow = new View.Home();
+                loginWindow.DataContext = newViewModel;
                 loginWindow.Show();
                 Application.Current.MainWindow.Close();
             }
