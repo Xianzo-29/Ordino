@@ -1,0 +1,111 @@
+﻿<Window x:Class="Ordino.View.Reference"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ordino.View"
+        mc:Ignorable="d"
+        Title="Reference" Height="450" Width="800">
+    <Grid>
+        <Viewbox>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="535"/>
+                    <ColumnDefinition Width="120*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Row="1"
+                        Grid.Column="0"
+                        Width="520"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Background="Gray"
+                        CornerRadius="12"
+                        Padding="36,32"
+                        Height="320"/>
+                <DataGrid Grid.Row="1"
+                          Grid.Column="0"
+                          ItemsSource="{Binding Folder}" 
+                          AutoGenerateColumns="True"
+                          CanUserAddRows="True" 
+                          Margin="0,-50,0,0"
+                          Height="250" Width="440"
+                          Grid.RowSpan="2"
+                          AlternatingRowBackground="#FFD1DC">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Course"
+                                            Binding="{Binding courseName}"
+                                            Width="110"/>
+                        <DataGridTextColumn Header="Activity"
+                                            Binding="{Binding activityName}"
+                                            Width="*"/>
+                        <DataGridTextColumn Header="File Type"
+                                            Binding="{Binding FTName}"
+                                            Width="70"/>         
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Border Grid.Row="1"
+                        Grid.Column="1"
+                        Width="230"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Center"
+                        Background="Pink"
+                        CornerRadius="12"
+                        Padding="36,32"
+                        Height="320"
+                        />
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="    Add Document Information"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Margin="0,25,0,0"
+                                   />
+                        <TextBlock Text="Course"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   Margin="15,20,0,0"/>
+                        <TextBox FontSize="10" 
+                                 Height="20" 
+                                 Width ="200" 
+                                 Margin=" -100, 5,-100,0"/>
+                        <TextBlock Text="Activity"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   Margin="15,20,0,0"/>
+                        <TextBox FontSize="10" 
+                                 Height="20" 
+                                 Width ="200" 
+                                 Margin=" -100, 5,-100,0"/> 
+                        <TextBlock Text="File Type"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   Margin="15,20,0,0"/>
+                        <TextBox FontSize="10" 
+                                     Height="20" 
+                                     Width ="200" 
+                                     Margin=" -100, 5,-100,0"/>
+                        <Button Content="Add"
+                                Background="Gray"
+                                Foreground="White"
+                                HorizontalAlignment="Center"
+                                Height="25" 
+                                Width="80"
+                                Margin="0,25,0,0"/>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Viewbox>
+        
+        
+    </Grid>
+</Window>
