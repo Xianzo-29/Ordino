@@ -25,7 +25,7 @@
                         Width="520"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        Background="Gray"
+                        Background="Gray" 
                         CornerRadius="12"
                         Padding="36,32"
                         Height="320"/>
