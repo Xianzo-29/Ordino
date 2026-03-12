@@ -8,7 +8,7 @@ using Ordino.ViewModel;
 
 namespace Ordino.Model
 {
-    class HomePageTest : ObservableObject
+    public class HomePageTest : ObservableObject
     {
         private string _course = string.Empty;
         private string _title = string.Empty;

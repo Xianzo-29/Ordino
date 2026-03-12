@@ -22,6 +22,7 @@ namespace Ordino.View
         public Reference()
         {
             InitializeComponent();
+            this.DataContext = new ViewModel.ReferenceVM();
         }
     }
 }
