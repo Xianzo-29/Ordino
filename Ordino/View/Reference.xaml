@@ -69,14 +69,6 @@
                                    VerticalAlignment="Center"
                                    Margin="0,25,0,0"
                                    />
-                        <TextBlock Text="Course"
-                                   FontSize="12"
-                                   FontWeight="Medium"
-                                   Margin="15,20,0,0"/>
-                        <TextBox FontSize="10" 
-                                 Height="20" 
-                                 Width ="200" 
-                                 Margin=" -100, 5,-100,0"/>
                         <TextBlock Text="Activity"
                                    FontSize="12"
                                    FontWeight="Medium"
@@ -84,7 +76,18 @@
                         <TextBox FontSize="10" 
                                  Height="20" 
                                  Width ="200" 
-                                 Margin=" -100, 5,-100,0"/> 
+                                 Margin=" -100, 5,-100,0"
+                                 Text="{Binding addData.Activity}"
+                                 />
+                        <TextBlock Text="Course"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   Margin="15,20,0,0"/>
+                        <TextBox FontSize="10" 
+                                 Height="20" 
+                                 Width ="200" 
+                                 Margin=" -100, 5,-100,0"
+                                 Text="{Binding addData.Course}"/>
                         <TextBlock Text="File Type"
                                    FontSize="12"
                                    FontWeight="Medium"
@@ -92,20 +95,38 @@
                         <TextBox FontSize="10" 
                                      Height="20" 
                                      Width ="200" 
-                                     Margin=" -100, 5,-100,0"/>
-                        <Button Content="Add"
-                                Background="Gray"
-                                Foreground="White"
-                                HorizontalAlignment="Center"
-                                Height="25" 
-                                Width="80"
-                                Margin="0,25,0,0"/>
+                                     Margin=" -100, 5,-100,0"
+                                 Text="{Binding addData.FileType}"/>
                     </StackPanel>
+                    <Button Content="Add"
+                            Background="Gray"
+                            Foreground="White"
+                            HorizontalAlignment="Left"
+                            Height="20" 
+                            Width="50"
+                            Margin="16,260,0,40"
+                            Command="{Binding SaveCommand}"/>
+                    <Button Content="Delete"
+                            Background="Gray"
+                            Foreground="White"
+                            HorizontalAlignment="Center"
+                            Height="20" 
+                            Width="50"
+                            Margin="0,260,0,40"
+                            />
+                    <Button Content="Clear"
+                            Background="Gray"
+                            Foreground="White"
+                            HorizontalAlignment="Left"
+                            Height="20" 
+                            Width="50"
+                            Margin="163,260,0,40"
+                            Command="{Binding ClearCommand}"/>
                 </Grid>
 
             </Grid>
         </Viewbox>
-        
-        
+
+
     </Grid>
 </Window>
