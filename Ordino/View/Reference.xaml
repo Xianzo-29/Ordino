@@ -37,7 +37,8 @@
                           Margin="0,-50,0,0"
                           Height="250" Width="440"
                           Grid.RowSpan="2"
-                          AlternatingRowBackground="#FFD1DC">
+                          AlternatingRowBackground="#FFD1DC"
+                          SelectedItem="{Binding SelectedData}">
 
                     <!--<DataGrid.Columns>
                         <DataGridTextColumn Header="Course"
@@ -113,6 +114,7 @@
                             Height="20" 
                             Width="50"
                             Margin="0,260,0,40"
+                            Command="{Binding DeleteCommand}"
                             />
                     <Button Content="Clear"
                             Background="Gray"

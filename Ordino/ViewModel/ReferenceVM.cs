@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace Ordino.ViewModel
 {
-    internal class ReferenceVM
+    internal class ReferenceVM : ObservableObject
     {
         public ObservableCollection<HomePageTest> Folder { get; set;}
 
@@ -17,6 +17,11 @@ namespace Ordino.ViewModel
 
         public ICommand SaveCommand { get; set; }
         public ICommand ClearCommand { get; set; }
+        public ICommand DeleteCommand { get; set; }
+
+        private HomePageTest _selectedData;
+
+        
 
         public ReferenceVM()
         {
@@ -28,6 +33,23 @@ namespace Ordino.ViewModel
             addData = new HomePageTest();
             SaveCommand = new RelayCommand(ExecuteSaveCommand);
             ClearCommand = new RelayCommand(ExecuteClearCommand);
+            DeleteCommand = new RelayCommand(ExecuteDeleteCommand);
+        }
+        public HomePageTest SelectedData
+        {
+            get { return _selectedData; }
+            set
+            {
+                _selectedData = value;
+                OnPropertyChanged(nameof(SelectedData));
+
+                if (SelectedData != null)
+                {
+                    addData.Activity = SelectedData.Activity;
+                    addData.Course = SelectedData.Course;
+                    addData.FileType = SelectedData.FileType;
+                }
+            }
         }
 
         public void ExecuteSaveCommand(object? par)
@@ -42,6 +64,14 @@ namespace Ordino.ViewModel
 
         public void ExecuteClearCommand(object? par)
         {
+            addData.Activity = string.Empty;
+            addData.Course = string.Empty;
+            addData.FileType = string.Empty;
+        }
+
+        public void ExecuteDeleteCommand(object? par)
+        {
+            Folder.Remove(SelectedData);
             addData.Activity = string.Empty;
             addData.Course = string.Empty;
             addData.FileType = string.Empty;
